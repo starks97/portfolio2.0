@@ -1,5 +1,5 @@
 // @ts-check
-<<<<<<< HEAD
+
 import { defineConfig, envField } from 'astro/config';
 
 import vercel from '@astrojs/vercel';
@@ -43,9 +43,3 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 });
-=======
-import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
-export default defineConfig({});
->>>>>>> 6f20ec47f1cd8bd722e078acecacbbbe376f3c46

@@ -1,7 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-<<<<<<< HEAD
   "exclude": ["dist"],
   "compilerOptions": {
     "baseUrl": ".",
@@ -16,7 +15,4 @@
       "@middleware": ["src/middleware.ts"]
     }
   }
-=======
-  "exclude": ["dist"]
->>>>>>> 6f20ec47f1cd8bd722e078acecacbbbe376f3c46
 }
