@@ -1,7 +1,9 @@
 <<<<<<< HEAD
+
 # portfolio2.0
-the last chance to have a portfolio in the best way
-=======
+
+# the last chance to have a portfolio in the best way
+
 # Astro Starter Kit: Portfolio
 
 ```sh
@@ -32,4 +34,5 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
->>>>>>> 4f18ecd (Initial commit from Astro)
+
+> > > > > > > 4f18ecd (Initial commit from Astro)

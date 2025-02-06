@@ -1,0 +1,31 @@
+---
+import { actions } from 'astro:actions';
+
+const cookie = Astro.cookies.get('spotify_access_token');
+
+const access_token = cookie?.value;
+
+/*try {
+    const { data, error } = await Astro.callAction(
+        actions.spotify.fetchMyPlayLists,
+        { access_token },
+    );
+
+    const { data: playListItems, error: playListItemsError } =
+        await Astro.callAction(actions.spotify.fetchPlayListItems, {
+            access_token,
+        });
+
+    const playListItemsResponse = playListItems?.playListItems?.items;
+
+    const playLists = data?.myPlayLists?.items;
+
+    //console.log(playListItemsResponse);
+} catch (err) {
+    console.log(err);
+    }*/
+---
+
+<div>
+  <h1>Now Playing</h1>
+</div>
