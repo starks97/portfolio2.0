@@ -1,0 +1,37 @@
+{
+  "home": {
+    "hero": {
+      "title": "Hello, my name is Jefferson Espinoza",
+      "tagline": "I am a Developer who is currently based in Riverhead, New York.",
+      "image": "/assets/me.JPG"
+    },
+    "skills": [
+      {
+        "id": 1,
+        "title": "Full Stack",
+        "description": "As a full-stack developer, I have hands-on experience working with both front-end and back-end technologies, building seamless, end-to-end web applications.",
+        "icon": "terminal-window"
+      },
+      {
+        "id": 2,
+        "title": "Growth Minset",
+        "description": "I am a self-taught developer who thrives in learning new programming languages, tools, and concepts through hands-on experience and community resources.",
+        "icon": "trophy"
+      },
+      {
+        "id": 3,
+        "title": "Strategy Minded",
+        "description": "As a strategy-minded developer, I approach problem-solving with a planned, goal-oriented mindset, focusing on long-term scalability and efficient decision-making.",
+        "icon": "strategy"
+      }
+    ],
+    "work": {
+      "title": "Selected work",
+      "description": "Take a look below at some of my featured work for clients from the past few years."
+    },
+    "spotify": {
+      "title": "🎶 What Fuels My Code",
+      "description": "Music powers my code! See what’s playing right now and dive into my coding soundtrack. 🚀🎧"
+    }
+  }
+}

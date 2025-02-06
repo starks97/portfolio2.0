@@ -1,31 +1,69 @@
 ---
 import { actions } from 'astro:actions';
+import type {
+  MySpotifyPlayLists,
+  SpotifyAlbums,
+  SpotifyPlayListItems,
+} from '../types';
 
 const cookie = Astro.cookies.get('spotify_access_token');
-
 const access_token = cookie?.value;
 
-/*try {
-    const { data, error } = await Astro.callAction(
-        actions.spotify.fetchMyPlayLists,
-        { access_token },
-    );
+// Use let to allow reassignment
+let playLists: MySpotifyPlayLists['items'] = [];
+let playListItems: SpotifyPlayListItems['items'] = [];
 
-    const { data: playListItems, error: playListItemsError } =
-        await Astro.callAction(actions.spotify.fetchPlayListItems, {
-            access_token,
-        });
+try {
+  const { data, error } = await Astro.callAction(
+    actions.spotify.fetchMyPlayLists,
+    { access_token }
+  );
+  playLists = data?.myPlayLists?.items || [];
 
-    const playListItemsResponse = playListItems?.playListItems?.items;
-
-    const playLists = data?.myPlayLists?.items;
-
-    //console.log(playListItemsResponse);
+  const { data: playListDataItems, error: playListItemsError } =
+    await Astro.callAction(actions.spotify.fetchPlayListItems, {
+      access_token,
+    });
+  playListItems = playListDataItems?.playListItems?.items || [];
 } catch (err) {
-    console.log(err);
-    }*/
+  console.log(err);
+}
 ---
 
-<div>
-  <h1>Now Playing</h1>
+<div
+  class="mx-auto w-full flex justify-center items-center mt-10"
+  id="spotify-section"
+>
+  <div
+    class="grid grid-cols-1 lg:grid-cols-3 gap-10 w-full max-w-4xl justify-center"
+  >
+    {
+      playLists.length > 0 ? (
+        playLists.map((playlist) => (
+          <div class="w-full rounded-xl overflow-hidden shadow-md hover:scale-105 transform transition-transform duration-300 border-[1px] border-orange-500">
+            <img
+              class="w-full h-auto object-cover "
+              src={playlist.images?.[0]?.url || '/default-image.jpg'}
+              alt={playlist.name}
+            />
+            <div class="p-4">
+              <h5 class="font-bold mb-2" id="title">
+                {playlist.name}
+              </h5>
+              <p class="">{playlist.owner?.display_name}</p>
+              <p class="">{playlist.tracks?.total} Tracks</p>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p>Loading playlists...</p>
+      )
+    }
+  </div>
 </div>
+
+<style>
+  #spotify-section {
+    margin-top: 3rem;
+  }
+</style>

@@ -7,6 +7,7 @@ import {
 import type {
   LoginResponse,
   MySpotifyPlayLists,
+  SpotifyAlbums,
   SpotifyPlayListItems,
 } from '../types';
 
@@ -106,6 +107,7 @@ export const server = {
           'https://api.spotify.com/v1/users/25xn3lx8ghfoi9gtycg9nn70t/playlists',
           {
             headers: { Authorization: `Bearer ${access_token}` },
+            cache: 'default',
           }
         );
 
@@ -120,11 +122,18 @@ export const server = {
 
     fetchPlayListItems: defineAction({
       accept: 'json',
-      handler: async ({ access_token }: { access_token: string }) => {
+      handler: async ({
+        access_token,
+        playListId,
+      }: {
+        access_token: string;
+        playListId: string;
+      }) => {
         const response = await fetch(
-          'https://api.spotify.com/v1/playlists/4rSBRJwwKs98oflpM4flKo/tracks',
+          `https://api.spotify.com/v1/playlists/${playListId}/tracks`,
           {
             headers: { Authorization: `Bearer ${access_token}` },
+            cache: 'default',
           }
         );
 
@@ -135,6 +144,21 @@ export const server = {
         const playListItems = (await response.json()) as SpotifyPlayListItems;
 
         return { playListItems };
+      },
+    }),
+    fetchAlbums: defineAction({
+      accept: 'json',
+      handler: async ({ access_token }: { access_token: string }) => {
+        const response = await fetch('https://api.spotify.com/v1/albums', {
+          headers: { Authorization: `Bearer ${access_token}` },
+        });
+        if (response.status === 204) {
+          return { albums: null };
+        }
+
+        const albums = (await response.json()) as SpotifyAlbums[];
+
+        return { albums };
       },
     }),
   },
