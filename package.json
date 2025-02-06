@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+<<<<<<< HEAD
     "astro": "astro",
     "prettier": "pnpm exec prettier . --write"
   },
@@ -22,3 +23,11 @@
     "prettier-plugin-astro": "^0.14.1"
   }
 }
+=======
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.1.10"
+  }
+}
+>>>>>>> 6f20ec47f1cd8bd722e078acecacbbbe376f3c46
