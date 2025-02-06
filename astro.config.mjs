@@ -2,11 +2,9 @@
 
 import { defineConfig, envField } from 'astro/config';
 
-import vercel from '@astrojs/vercel';
+//import vercel from '@astrojs/vercel';
 
 import node from '@astrojs/node';
-
-import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,20 +24,11 @@ export default defineConfig({
         access: 'secret',
         default: '',
       }),
-      SPOTIFY_REFRESH_TOKEN: envField.string({
-        context: 'server',
-        access: 'secret',
-        default: '',
-      }),
       SPOTIFY_REDIRECT_URI: envField.string({
         context: 'server',
         access: 'secret',
         default: '',
       }),
     },
-  },
-
-  vite: {
-    plugins: [tailwindcss()],
   },
 });
