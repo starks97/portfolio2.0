@@ -29,9 +29,24 @@
       "title": "Selected work",
       "description": "Take a look below at some of my featured work for clients from the past few years."
     },
+
     "spotify": {
       "title": "🎶 What Fuels My Code",
-      "description": "Music powers my code! See what’s playing right now and dive into my coding soundtrack. 🚀🎧"
+      "description": "Music powers my code! See what’s playing right now and dive into my coding soundtrack. 🚀🎧",
+      "playlists": [
+        {
+          "id": 1,
+          "title": "Deep House",
+          "description": "Deep house is my go-to for debugging. The repetitive rhythms create a sense of structure, helping me spot patterns in errors, while the calming vibe reduces stress and keeps my mind clear. It's perfect for getting into that flow state and blocking out distractions so I can focus on fixing those pesky bugs.",
+          "src": "https://open.spotify.com/embed/playlist/4rSBRJwwKs98oflpM4flKo?utm_source=generator&theme=0"
+        },
+        {
+          "id": 2,
+          "title": "Harvey Specter",
+          "description": "This playlist—because even programmers need a little swagger—provides a jolt of upbeat, motivational music perfect for tackling creative blocks and staying committed to that 'impossible' deadline. It's the soundtrack to feeling like you just closed a massive deal (even if it's just a pull request). The subconscious association with success fuels the drive to conquer coding challenges, while the right tunes surprisingly sharpen focus and boost creative thinking. Basically, it's positive reinforcement on repeat, because who *doesn't* want to feel like they're closing deals while they're coding?",
+          "src": "https://open.spotify.com/embed/playlist/0ffCTVtD32MEjg6QGbjg9N?utm_source=generator&theme=0"
+        }
+      ]
     }
   }
 }
