@@ -1,11 +1,12 @@
 ---
 import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
+import { EMAIL } from '@consts';
 ---
 
 <aside>
   <h2>Interested in working together?</h2>
-  <CallToAction href="mailto:me@example.com">
+  <CallToAction href={`mailto:${EMAIL}`}>
     Send Me a Message
     <Icon icon="paper-plane-tilt" size="1.2em" />
   </CallToAction>

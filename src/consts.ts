@@ -13,3 +13,5 @@ export const SPOTIFY_REQUEST_ALBUMS_URL = 'https://api.spotify.com/v1/albums';
 
 export const SPOTIFY_REQUEST_SAVED_TRACKS_URL =
   'https://api.spotify.com/v1/me/tracks';
+
+export const EMAIL = 'jeffersonespinoza45@gmail.com';

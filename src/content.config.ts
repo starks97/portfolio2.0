@@ -1,6 +1,6 @@
 import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
-
+import { Category } from './types';
 export const collections = {
   work: defineCollection({
     // Load Markdown files in the src/content/work directory.
@@ -20,13 +20,12 @@ export const collections = {
       title: z.string(),
       description: z.string(),
       publishDate: z.coerce.date(),
+      category: z.nativeEnum(Category),
       tags: z.array(z.string()),
       img: z.string(),
       img_alt: z.string().optional(),
-      // Additional fields for a blog can be added here
       author: z.string().optional(),
       slug: z.string().optional(),
-      content: z.string(),
     }),
   }),
 };
