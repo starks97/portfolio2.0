@@ -1,5 +1,5 @@
 import { ActionError, defineAction } from 'astro:actions';
-import {
+/*import {
   SPOTIFY_CLIENT_ID,
   SPOTIFY_CLIENT_SECRET,
   SPOTIFY_REDIRECT_URI,
@@ -9,7 +9,7 @@ import type {
   MySpotifyPlayLists,
   SpotifyPlayListItems,
   SpotifyTracks,
-} from '../types';
+  } from '../types';*/
 
 import {
   TOKEN,
@@ -22,7 +22,7 @@ import {
   SPOTIFY_REQUEST_SAVED_TRACKS_URL,
 } from '@consts';
 
-export const server = {
+/*export const server = {
   spotify: {
     login: defineAction({
       accept: 'json',
@@ -131,4 +131,4 @@ export const server = {
       },
     }),
   },
-};
+};*/
