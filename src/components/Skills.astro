@@ -9,11 +9,18 @@ const dataSkills = data.home['skills'];
 import { iconPaths } from './IconPaths';
 ---
 
-<section class="box skills">
+<section
+  class="box skills"
+  x-data="{ intersect: false }"
+  x-intersect:enter="intersect = true"
+  x-intersect:leave="intersect = false"
+>
   {
     dataSkills &&
-      dataSkills.map((item) => (
-        <div class="stack gap-2 lg:gap-4">
+      dataSkills.map((item, id) => (
+        <div class="stack gap-2 lg:gap-4 opacity-0"
+        :class="intersect ? 'animate-fade-up animate-ease-in-out': 'opacity-0'"
+        >
           <Icon
             icon={item.icon as keyof typeof iconPaths}
             color="var(--accent-regular)"

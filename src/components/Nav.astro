@@ -38,9 +38,17 @@ const isCurrentPage = (href: string) => {
 };
 ---
 
-<nav>
+<nav
+  x-data="{ intersect: false }"
+  x-intersect:enter="intersect = true"
+  x-intersect:leave="intersect = false"
+>
   <div class="menu-header">
-    <a href="/" class="site-title">
+    <a
+      href="/"
+      class="site-title opacity-0"
+      :class="intersect ? 'animate-fade animate-ease-in-out': 'opacity-0'"
+    >
       <Icon
         icon="terminal-window"
         color="var(--accent-regular)"
@@ -65,7 +73,7 @@ const isCurrentPage = (href: string) => {
           <li>
             <a
               aria-current={isCurrentPage(href) ? 'page' : null}
-              class="link"
+              class="link "
               href={href}
             >
               {label}

@@ -9,7 +9,12 @@ import Hero from '../components/Hero.astro';
   title="About | Jefferson Espinoza"
   description="About Jefferson Espinoza"
 >
-  <div class="stack gap-20">
+  <div
+    class="stack gap-20"
+    x-data="{ intersect: false }"
+    x-intersect:enter="intersect = true"
+    x-intersect:leave="intersect = false"
+  >
     <main class="wrapper about">
       <Hero
         title="About"
@@ -20,6 +25,8 @@ import Hero from '../components/Hero.astro';
           height="873"
           src="/assets/at-work.jpg"
           alt="Jefferson at work with a colleague"
+          class="opacity-0"
+          :class="intersect ? 'animate-fade-up animate-duration-1000 animate-ease-in animate-delay-500' : 'opacity-0'"
         />
       </Hero>
 

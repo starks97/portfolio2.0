@@ -13,9 +13,6 @@ interface Props {
   entry: CollectionEntry<'work'>;
 }
 
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
   const work = await getCollection('work');
   return work.map((entry) => ({
@@ -29,17 +26,22 @@ const { Content } = await render(entry);
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
-  <div class="stack gap-20">
+  <div
+    class="stack gap-20"
+    x-data="{ intersect: false }"
+    x-intersect:enter="intersect = true"
+    x-intersect:leave="intersect = false"
+  >
     <div class="stack gap-15">
       <header>
         <div class="wrapper stack gap-2">
           <a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
           <Hero title={entry.data.title} align="start">
             <div class="details">
-              <div class="tags">
+              <div class="tags opacity-0" :class="intersect ? 'animate-fade animate-duration-700 animate-ease-in animate-delay-100' : 'opacity-0'">
                 {entry.data.tags.map((t) => <Pill>{t}</Pill>)}
               </div>
-              <p class="description">{entry.data.description}</p>
+              <p class="description opacity-0" :class="intersect ? 'animate-fade-left animate-duration-1000 animate-ease-in animate-delay-300' : 'opacity-0'">{entry.data.description}</p>
             </div>
           </Hero>
         </div>
@@ -48,10 +50,10 @@ const { Content } = await render(entry);
         <div class="stack gap-10 content">
           {
             entry.data.img && (
-              <img src={entry.data.img} alt={entry.data.img_alt || ''} />
+              <img src={entry.data.img} alt={entry.data.img_alt || ''} class="opacity-0" :class="intersect ? 'animate-fade-up animate-duration-1000 animate-ease-in animate-delay-500' : 'opacity-0'" />
             )
           }
-          <div class="content">
+          <div class="content opacity-0" :class="intersect ? 'animate-fade-up animate-duration-1000 animate-ease-in animate-delay-600' : 'opacity-0'">
             <Content />
           </div>
         </div>

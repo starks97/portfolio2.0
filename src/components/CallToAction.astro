@@ -6,7 +6,12 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<a href={href}><slot /></a>
+<a
+  href={href}
+  class="opacity-0"
+  :class="intersect ? 'animate-fade-left animate-duration-1000 animate-delay-600 animate-ease-in-out': 'opacity-0'"
+  ><slot /></a
+>
 
 <style>
   a {

@@ -4,8 +4,17 @@ import Icon from './Icon.astro';
 import { EMAIL } from '@consts';
 ---
 
-<aside>
-  <h2>Interested in working together?</h2>
+<aside
+  x-data="{ intersect: false }"
+  x-intersect:enter="intersect = true"
+  x-intersect:leave="intersect = false"
+>
+  <h2
+    class="opacity-0"
+    :class="intersect ? 'animate-fade-left animate-duration-1000 animate-delay-500 animate-ease-in-out': 'opacity-0'"
+  >
+    Interested in working together?
+  </h2>
   <CallToAction href={`mailto:${EMAIL}`}>
     Send Me a Message
     <Icon icon="paper-plane-tilt" size="1.2em" />

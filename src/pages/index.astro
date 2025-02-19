@@ -31,8 +31,7 @@ const homeData = data['home'];
 <BaseLayout>
   <div class="stack gap-20 lg:gap-48">
     <div
-      class="wrapper stack gap-8 lg:gap-20 opacity-0"
-      :class="intersect ? 'animate-fade-down animate-ease-out': 'opacity-0'"
+      class="wrapper stack gap-8 lg:gap-20"
       x-data="{ intersect: false }"
       x-intersect:enter="intersect = true"
       x-intersect:leave="intersect = false"
@@ -67,10 +66,23 @@ const homeData = data['home'];
     </div>
 
     <main class="wrapper stack gap-20 lg:gap-48">
-      <section class="section with-background with-cta">
+      <section
+        class="section with-background with-cta"
+        x-data="{ intersect: false }"
+        x-intersect:enter="intersect = true"
+        x-intersect:leave="intersect = false"
+      >
         <header class="section-header stack gap-2 lg:gap-4">
-          <h3>{homeData.work.title}</h3>
-          <p>
+          <h3
+            class="opacity-0"
+            :class="intersect ? 'animate-fade-up animate-ease-in animate-duration-1000 animate-delay-500': 'opacity-0'"
+          >
+            {homeData.work.title}
+          </h3>
+          <p
+            class="opacity-0"
+            :class="intersect ? 'animate-fade-left animate-ease-in animate-duration-1000 animate-delay-800': 'opacity-0'"
+          >
             {homeData.work.description}
           </p>
         </header>
@@ -78,8 +90,10 @@ const homeData = data['home'];
         <div class="gallery">
           <Grid variant="offset">
             {
-              projects.map((project) => (
-                <li>
+              projects.map((project, index) => (
+                <li class="opacity-0"
+                :class="intersect ? 'animate-fade-up animate-ease-in animate-duration-1000' : 'opacity-0'"
+                >
                   <PortfolioPreview project={project} />
                 </li>
               ))

@@ -18,7 +18,12 @@ const projects = (await getCollection('work')).sort(
   description="Learn about Jefferson Espinoza's most recent projects"
 >
   <div class="stack gap-20">
-    <main class="wrapper stack gap-8">
+    <main
+      class="wrapper stack gap-8"
+      x-data="{ intersect: false }"
+      x-intersect:enter="intersect = true"
+      x-intersect:leave="intersect = false"
+    >
       <Hero
         title="My Work"
         tagline="See my most recent projects below to get an idea of my past experience."
@@ -27,7 +32,8 @@ const projects = (await getCollection('work')).sort(
       <Grid variant="offset">
         {
           projects.map((project) => (
-            <li>
+            <li class="opacity-0"
+            :class="intersect ? 'animate-fade-up animate-ease-in animate-duration-1000' : 'opacity-0'">
               <PortfolioPreview project={project} />
             </li>
           ))

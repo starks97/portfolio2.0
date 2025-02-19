@@ -1,23 +1,17 @@
 ---
 import data from '../data.json';
 const playListsLinks = data['home']['spotify']['playlists'];
-interface Props {
-  isIntersecting: boolean;
-}
 
-const { isIntersecting } = Astro.props;
 
 ---
 
 <div class="mx-auto grid h-auto grid-cols-1 justify-items-center gap-10 p-10 w-full mt-10 opacity-0"
-  :class="intersect ? 'animate-fade-left animate-duration-1500 animate-delay-750 animate-ease-in-out' : 'opacity-0'"
+  :class="intersect ? 'animate-fade-left animate-duration-1000 animate-delay-500 animate-ease-in-out' : 'opacity-0'"
   id="spotify_card"
-
   >
     {playListsLinks.map((value) => (
       <div
-        class="w-full flex lg:flex-row items-center gap-10 flex-col-reverse opacity-0"
-        :class="intersect ? 'animate-fade-up animate-ease-out' : 'opacity-0'"
+        class="w-full flex lg:flex-row items-center gap-10 flex-col-reverse "
       >
         <iframe
           style="border-radius:12px"
@@ -28,12 +22,12 @@ const { isIntersecting } = Astro.props;
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
           class="opacity-0"
-          :class="intersect ? 'animate-fade-up animate-duration-1500 animate-delay-750' : 'opacity-0'"
+          :class="intersect ? 'animate-fade animate-duration-1500 animate-delay-700' : 'opacity-0'"
         />
-        <div class="w-full flex flex-col gap-10 opacity-0" :class="intersect ? 'animate-fade-left animate-ease-out': 'opacity-0'">
+        <div class="w-full flex flex-col gap-10 ">
           <h5
           class="text-center lg:text-left opacity-0"
-          :class="intersect ? 'animate-fade-up animate-duration-1500 animate-delay-750' : 'opacity-0'"
+          :class="intersect ? 'animate-fade-up animate-duration-1000 animate-delay-700' : 'opacity-0'"
           >
             {value.title}
           </h5>

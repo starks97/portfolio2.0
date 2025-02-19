@@ -2,15 +2,40 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer>
-  <div class="group">
+<footer
+  x-data="{ intersect: false }"
+  x-intersect:enter="intersect = true"
+  x-intersect:leave="intersect = false"
+>
+  <div
+    class="group opacity-0"
+    :class="intersect ? 'animate-fade-up animate-duration-1000 animate-ease-in-out': 'opacity-0'"
+  >
     <p>Readapt & Developed by</p>
     <p>&copy; {currentYear} Jefferson Espinoza</p>
   </div>
   <p class="socials">
-    <a href="https://twitter.com/me"> Instagram</a>
-    <a href="https://github.com/me"> GitHub</a>
-    <a href="https://codepen.io/me"> LinkedIn</a>
+    <a
+      class="opacity-0"
+      :class="intersect ? 'animate-fade-left animate-duration-1000 animate-delay-300 animate-ease-in': 'opacity-0'"
+      href="https://twitter.com/me"
+    >
+      Instagram</a
+    >
+    <a
+      class="opacity-0"
+      :class="intersect ? 'animate-fade-left animate-duration-1000 animate-delay-500 animate-ease-in': 'opacity-0'"
+      href="https://github.com/me"
+    >
+      GitHub</a
+    >
+    <a
+      class="opacity-0"
+      :class="intersect ? 'animate-fade-left animate-duration-1000 animate-delay-700 animate-ease-in': 'opacity-0'"
+      href="https://codepen.io/me"
+    >
+      LinkedIn</a
+    >
   </p>
 </footer>
 <style>
