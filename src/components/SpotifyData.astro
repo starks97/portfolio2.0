@@ -1,37 +1,50 @@
 ---
 import data from '../data.json';
 const playListsLinks = data['home']['spotify']['playlists'];
+interface Props {
+  isIntersecting: boolean;
+}
+
+const { isIntersecting } = Astro.props;
+
 ---
 
-<div class="mx-auto w-full mt-10" id="spotify-section">
-  <div
-    class="mx-auto grid h-auto grid-cols-1 justify-items-center gap-10 p-10"
-    id="spotify_card"
+<div class="mx-auto grid h-auto grid-cols-1 justify-items-center gap-10 p-10 w-full mt-10 opacity-0"
+  :class="intersect ? 'animate-fade-left animate-duration-1500 animate-delay-750 animate-ease-in-out' : 'opacity-0'"
+  id="spotify_card"
+
   >
-    {
-      playListsLinks.map((value) => (
-        <div class="w-full flex lg:flex-row items-center gap-10 flex-col-reverse">
-          <iframe
-            style="border-radius:12px"
-            src={value.src}
-            width="100%"
-            height="352"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          />
-          <div class="w-full flex flex-col gap-10">
-            <h5 class="text-center lg:text-left">{value.title}</h5>
-            <p class="texter-center lg:text-left">{value.description}</p>
-          </div>
+    {playListsLinks.map((value) => (
+      <div
+        class="w-full flex lg:flex-row items-center gap-10 flex-col-reverse opacity-0"
+        :class="intersect ? 'animate-fade-up animate-ease-out' : 'opacity-0'"
+      >
+        <iframe
+          style="border-radius:12px"
+          src={value.src}
+          width="100%"
+          height="352"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          class="opacity-0"
+          :class="intersect ? 'animate-fade-up animate-duration-1500 animate-delay-750' : 'opacity-0'"
+        />
+        <div class="w-full flex flex-col gap-10 opacity-0" :class="intersect ? 'animate-fade-left animate-ease-out': 'opacity-0'">
+          <h5
+          class="text-center lg:text-left opacity-0"
+          :class="intersect ? 'animate-fade-up animate-duration-1500 animate-delay-750' : 'opacity-0'"
+          >
+            {value.title}
+          </h5>
+          <p class="text-center lg:text-left">{value.description}</p>
         </div>
-      ))
-    }
-  </div>
+      </div>
+    ))}
 </div>
 
 <style>
-  #spotify-section {
+  .spotify-section {
     margin-top: 3rem;
   }
   #spotify_card {
@@ -40,5 +53,6 @@ const playListsLinks = data['home']['spotify']['playlists'];
     padding: 1.5rem;
     background-color: var(--gray-999_40);
     box-shadow: var(--shadow-sm);
+    margin-top: 3rem;
   }
 </style>

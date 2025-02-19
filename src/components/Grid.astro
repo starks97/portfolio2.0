@@ -1,9 +1,10 @@
 ---
 interface Props {
   variant?: 'offset' | 'small';
+  id?: string;
 }
 
-const { variant } = Astro.props;
+const { variant, id } = Astro.props;
 ---
 
 <ul
@@ -11,6 +12,7 @@ const { variant } = Astro.props;
     'grid',
     { offset: variant === 'offset', small: variant === 'small' },
   ]}
+  id={id}
 >
   <slot />
 </ul>

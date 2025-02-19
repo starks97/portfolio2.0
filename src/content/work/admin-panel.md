@@ -1,6 +1,6 @@
 ---
 title: Robust Admin Panel
-publishDate: 2024-12-22 00:00:00
+publishDate: 2024-12-22
 img: /assets/admin.png
 img_alt: Admin Panel
 description: |

@@ -1,6 +1,6 @@
 ---
 title: ByteTrim
-publishDate: 2024-12-22 00:00:00
+publishDate: 2024-12-22
 img: /assets/bytetrim.png
 img_alt: ByteTrim Logo
 description: |

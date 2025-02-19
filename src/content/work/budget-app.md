@@ -1,6 +1,6 @@
 ---
 title: Budget Manager App
-publishDate: 2024-12-22 00:00:00
+publishDate: 2024-12-22
 img: /assets/manageBudget.png
 img_alt: Budget App
 description: |

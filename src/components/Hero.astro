@@ -10,8 +10,13 @@ const { align = 'center', tagline, title } = Astro.props;
 
 <div class:list={['hero stack gap-4', align]}>
   <div class="stack gap-2">
-    <h1 class="title">{title}</h1>
-    {tagline && <p class="tagline">{tagline}</p>}
+    <h1
+      class="title opacity-0"
+      :class="intersect ? 'animate-fade-left animate-ease-in-out animate-duration-1000 animate-delay-500' : 'opacity-0'"
+    >
+      {title}
+    </h1>
+    {tagline && <p class="tagline opacity-0" :class="intersect ? 'animate-fade-left animate-ease-in-out animate-duration-1000 animate-delay-600' : 'opacity-0'">{tagline}</p>}
   </div>
   <slot />
 </div>

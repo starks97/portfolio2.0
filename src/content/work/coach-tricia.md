@@ -1,6 +1,6 @@
 ---
 title: Coach Tricia Rago
-publishDate: 2024-12-22 00:00:00
+publishDate: 2024-12-22
 img: /assets/coach-tricia.png
 img_alt: Tricia Rago Coaching Logo/Image (Replace with actual alt text)
 description: |
