@@ -17,36 +17,24 @@ category: stories
 
 
 
-# The Road Less Traveled: How I Found My Purpose Through Coding
+### The first time I tried to code, I failed spectacularly—and it changed everything.
 
-## Introduction
-Life has a way of taking us on unexpected journeys. My path into tech was anything but traditional. It was filled with challenges, countless lessons, and moments of self-discovery. This is the story of how I found my passion for programming and learned that no obstacle is too big when you’re determined to succeed.
+When a friend casually asked, "Can you help me build a website?" I didn’t realize that simple question would redirect my entire career. At the time, I didn’t know how to do it, but I said yes anyway—launching me into the most frustrating and rewarding journey of my life.
 
-## My Journey Across Countries
-I was born in Ecuador, but life took a new direction when my mom decided to move to Spain in search of better opportunities. In Spain, I focused on my studies and earned my GED diploma in Science and Math. Later, we returned to Ecuador, where I needed to complete another GED focused on Business to gain enough credits for college. I enrolled in the Civil Engineering program at the University of Guayaquil, but deep down, I knew it wasn’t the right path for me.
+My path to that moment had already crossed continents. After moving from Ecuador to Spain and back, I’d studied Civil Engineering while secretly craving more creative problem-solving. The leap to America became my chance to start fresh—teaching myself English through late-night study sessions while working whatever jobs I could find.
 
-I yearned for something more meaningful, something that would inspire me every day. That’s when I made the life-changing decision to move to the United States—the land of opportunities.
+Each challenge, from language barriers to financial struggles, became proof that I could teach myself anything with enough determination.
 
-## Starting Over in the U.S.
-Adapting to life in the U.S. was tough. A family friend helped me settle in East Hampton and find a job, but I quickly realized that succeeding here required giving 100% every day. The language barrier was one of my biggest challenges. I couldn’t afford to attend formal English classes, so I took matters into my own hands.
+That first website project should have taken an experienced developer hours. It took me weeks. I still remember the exact moment my broken JavaScript function finally worked—that rush of triumph when the pieces clicked together.
 
-For a year, I studied English on my own, using every resource I could find. I connected with a tutor on Preply who played a significant role in my progress. Thanks to this effort, I earned my New York State GED in December 2020—a proud moment that opened many doors.
+What surprised me wasn’t just that I’d solved it, but how much I’d enjoyed the struggle. The late-night debugging sessions, the Stack Overflow deep dives, the constant cycle of breaking and fixing—I was hooked.
 
-## Discovering My Passion for Coding
-One day, someone asked for my help building a website. I had no idea how to do it, but my curiosity drove me to learn. From that moment, coding became an obsession. I immersed myself in tutorials, built small projects, and never looked back. I was captivated by the idea of solving real-world problems through code.
+Now I understand what captivated me: coding is the perfect intersection of logic and creativity. My background gives me unique advantages—the adaptability from navigating cultures, the grit from overcoming language barriers, and the problem-solving instincts honed through constant self-teaching.
 
-Balancing work and learning to code wasn’t easy. There were moments of frustration, and the demands of both left me feeling overwhelmed at times. But I never gave up. Every step forward was a reminder that I was closer to building something meaningful.
+I don’t just write code; I build solutions informed by a life of unconventional challenges.
 
-## What Coding Means to Me
-For me, coding isn’t just about writing lines of random code. It’s about solving problems from my unique perspective and applying everything I’ve learned along my journey. Coding is where creativity meets logic—where I can take an idea, break it down, and build something that works.
+Here’s what excites me now: Finding a team that values perspective as much as technical skills. Somewhere my journey from "I don’t know how to build this" to "Let me figure it out" isn’t just a story—it’s exactly the mindset they need.
 
-It’s also a personal escape. I love putting on my favorite music, slipping on my headphones, and diving into this incredible world of endless possibilities. There’s something magical about it.
+I want to contribute that same determination to meaningful projects and to keep growing alongside engineers who care about building things that matter.
 
-Of course, it’s not always fun and smooth. Debugging can be frustrating—those moments when you’re stuck on a problem for days, searching for the perfect solution. But nothing beats the satisfaction of finally figuring it out.
-
-Despite the challenges, I still love coding. It’s my passion, my creative outlet, and a constant reminder that there’s always a solution waiting to be discovered.
-
-## Looking Back and Moving Forward
-Today, I’m proud of how far I’ve come. My path hasn’t been easy, but it has shaped me into who I am. Coding is more than a skill to me—it’s my passion. I love solving problems and creating efficient solutions that can make a difference.
-
-To anyone on a similar journey: don’t give up. The road may be tough, but every obstacle is an opportunity to grow. Stay curious, stay committed, and never stop chasing your dreams.
+### So tell me—what problems should we solve together?

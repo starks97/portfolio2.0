@@ -19,9 +19,6 @@ Navigating the turbulent waters of a breakup can be incredibly challenging.  It'
 
 Tricia approached me with a vision: to create a website that not only showcased her coaching services but also reflected her unique approach to healing and empowerment.  We worked closely together, collaborating on every aspect of the design and development, to bring her vision to life.
 
-### More Than Just a Website: A Supportive Space
-
-This website is designed to be more than just a static online presence.  It's intended to be a supportive space where individuals can learn about unconscious uncoupling, connect with Tricia, and find resources to help them through their journey.
 
 ### Built with Simplicity and Purpose
 

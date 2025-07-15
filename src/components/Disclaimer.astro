@@ -1,0 +1,21 @@
+---
+import Hero from './Hero.astro';
+import CallToAction from './CallToAction.astro';
+import Icon from './Icon.astro';
+---
+
+<div class="disclaimer flex flex-col items-center gap-8 p-2.5">
+  <Hero
+    title="Want to see more?"
+    tagline="Some projects are code repositories without live UIs. Full implementations are available on:"
+    align="center"
+  />
+  <div
+    class="w-full sm:max-w-[18rem] md:max-w-[24rem] lg:max-w-[30rem] flex flex-col items-center gap-4"
+  >
+    <CallToAction href={`https://github.com/starks97?tab=repositories`}>
+      View My GitHub
+      <Icon icon="github-logo" size="1.2em" />
+    </CallToAction>
+  </div>
+</div>

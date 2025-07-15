@@ -28,12 +28,6 @@ ByteTrim is more than just a URL shortener; it's your personal link organizer. T
 * **Stay Secure:**  Your account is protected with secure user session management, including a refresh token mechanism.
 * **Share with Ease:** Quickly share your organized links with friends, colleagues, or clients.
 
-### How It Works: Magic with Modern Tech
-
-ByteTrim is powered by some seriously cool technology:
-
-* **Rust (Backend):**  The backend is built with Rust, a super-fast and reliable programming language. This means ByteTrim is quick and efficient.
-* **Remix (Frontend):** The user interface is built with Remix, a modern web framework that makes ByteTrim smooth and enjoyable to use.
 
 ### How It Works: Magic with Modern Tech
 
@@ -50,12 +44,6 @@ ByteTrim is powered by some seriously cool technology:
 * **Lightweight & Fast:**  ByteTrim won't slow you down.  It's designed for speed and efficiency.
 * **Easy to Use:**  Even if you're not a tech whiz, you'll find ByteTrim simple and intuitive.
 
-### Diving Deeper: Tech & Concepts
-
-I've written a couple of articles explaining some of the interesting technical challenges and solutions I encountered while building ByteTrim.  Check them out!
-
-* **Article 1: Implementing Core Concepts (Proxy, Refresh Tokens):**  This post dives into how I implemented key features like proxying requests and the refresh token system from my perspective.  [Link to Blog Post 1](/)
-* **Article 2:  *(Coming Soon)*:**  Stay tuned for my next article, where I'll cover even more about the development process and the technologies I used.
 
 ### Give ByteTrim a Try!
 

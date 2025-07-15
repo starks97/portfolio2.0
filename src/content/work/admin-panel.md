@@ -19,9 +19,6 @@ Managing a website or application often requires a robust and secure admin panel
 
 Creating a fully functional admin panel from scratch can be a complex undertaking.  It requires careful consideration of security, performance, and user experience.
 
-### The Solution: A NestJS-Powered Admin Panel
-
-This admin panel is built using NestJS, a progressive Node.js framework, providing a solid foundation for building scalable and maintainable applications.
 
 ### Key Features: Power and Flexibility
 
