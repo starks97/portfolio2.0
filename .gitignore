@@ -7,7 +7,6 @@ dist/
 
 .qodo/
 
-.vercel/
 
 # dependencies
 node_modules/
